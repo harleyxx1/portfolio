@@ -61,10 +61,15 @@ const ProjectCards = (props: ProjectCards) => {
   const viewSiteSubContainerClassname = cn(
     "flex items-center hover:cursor-pointer border-b border-b-transparent transition-all duration-700 relative hover:border-b-borderColor hover:translate-y-[-5px]"
   );
-  const viewSiteTextClassname = cn("text-[9px]", "sm:text-[13px]");
+  const viewSiteTextClassname = cn(
+    "text-[9px]",
+    "sm:text-[13px]",
+    "lg:text-xl"
+  );
   const viewSiteIconClassname = cn(
     "h-[10px] w-[10px]",
-    "sm:h-[15px] sm:w-[15px]"
+    "sm:h-[15px] sm:w-[15px]",
+    "lg:h-[20px] lg:w-[20px]"
   );
 
   const showId = id < 10 ? `0${id + 1}` : id + 1;
@@ -92,14 +97,16 @@ const ProjectCards = (props: ProjectCards) => {
             ))}
           </div>
         </div>
-        <div className={viewSiteContainerClassname}>
-          <div className={viewSiteSubContainerClassname}>
-            <Link href={projectURL}>
-              <p className={viewSiteTextClassname}>View Site</p>
-            </Link>
-            <GoArrowUpRight className={viewSiteIconClassname} />
+        {projectURL && (
+          <div className={viewSiteContainerClassname}>
+            <div className={viewSiteSubContainerClassname}>
+              <Link href={projectURL}>
+                <p className={viewSiteTextClassname}>View Site</p>
+              </Link>
+              <GoArrowUpRight className={viewSiteIconClassname} />
+            </div>
           </div>
-        </div>
+        )}
       </div>
       <div className="flex flex-1">
         <MonitorImageContainer image={projectShowCaseImage} />

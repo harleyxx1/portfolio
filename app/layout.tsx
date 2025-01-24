@@ -14,7 +14,7 @@ const interFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Ding Harley Catubag | Portfolio",
+  title: "dc. | Portfolio",
   description: "A portfolio of Ding Harley Catubag made using Next.js",
 };
 

@@ -11,7 +11,7 @@ export const listOfProjects: ProjectItemType[] = [
     id: 0,
     projectName: "My Portfolio",
     projectDescription: "Showcasing my creative projects, design expertise, and innovative solutions—explore my portfolio for fresh, impactful digital experiences.",
-    projectURL: "https://cute-kangaroo-95f1ae.netlify.app/",
+    projectURL: undefined,
     projectShowCaseImage: portfolio,
     techUsed: [
       {

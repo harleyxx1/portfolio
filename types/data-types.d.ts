@@ -5,7 +5,7 @@ export type ProjectItemType = {
   id: number,
   projectName: string,
   projectDescription: string,
-  projectURL: string,
+  projectURL: string | undefined,
   projectShowCaseImage: StaticImageData,
   techUsed: TechUsedItemType[]
 }
