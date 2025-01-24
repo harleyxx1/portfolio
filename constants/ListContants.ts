@@ -3,8 +3,8 @@ import { FaReact } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { ProjectItemType } from "@/types/data-types";
 import { RiNextjsFill } from "react-icons/ri";
-import portfolio from "@/public/static/images/portfolio.png";
-import positivus from "@/public/static/images/positivus.png"
+import portfolio from "@/public/images/portfolio.png";
+import positivus from "@/public/images/positivus.png"
 
 export const listOfProjects: ProjectItemType[] = [
   {

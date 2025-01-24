@@ -1,9 +1,9 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import developer from "@/public/static/lottie/developer.json";
-import web from "@/public/static/lottie/web.json";
-import mobile from "@/public/static/lottie/mobile.json";
+import developer from "@/public/lottie/developer.json";
+import web from "@/public/lottie/web.json";
+import mobile from "@/public/lottie/mobile.json";
 
 const LottieAnimation = dynamic(
   () => import("../../components/LottieComponent"),

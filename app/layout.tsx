@@ -6,22 +6,22 @@ import localFont from "next/font/local";
 const robotoMonoFont = localFont({
   src: [
     {
-      path: "../public/static/fonts/RobotoMono-Regular.ttf",
+      path: "../public/fonts/RobotoMono-Regular.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../public/static/fonts/RobotoMono-Medium.ttf",
+      path: "../public/fonts/RobotoMono-Medium.ttf",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../public/static/fonts/RobotoMono-SemiBold.ttf",
+      path: "../public/fonts/RobotoMono-SemiBold.ttf",
       weight: "600",
       style: "normal",
     },
     {
-      path: "../public/static/fonts/RobotoMono-Bold.ttf",
+      path: "../public/fonts/RobotoMono-Bold.ttf",
       weight: "700",
       style: "normal",
     },
