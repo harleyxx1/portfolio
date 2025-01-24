@@ -32,8 +32,8 @@ const NavigationBar = () => {
         <Link href={"/projects"}>
           <span
             className={cn(
-              "transition-all font-normal hover:font-extrabold hover:tracking-widest",
-              pathname === "/projects" && "font-extrabold tracking-widest"
+              "transition-all font-normal hover:font-bold hover:tracking-widest",
+              pathname === "/projects" && "font-bold tracking-widest"
             )}
           >
             {ButtonConstants.projects}
@@ -42,8 +42,8 @@ const NavigationBar = () => {
         <Link href={"/works"}>
           <span
             className={cn(
-              "transition-all font-normal hover:font-extrabold hover:tracking-widest",
-              pathname === "/works" && "font-extrabold tracking-widest"
+              "transition-all font-normal hover:font-bold hover:tracking-widest",
+              pathname === "/works" && "font-bold tracking-widest"
             )}
           >
             {ButtonConstants.works}
@@ -55,7 +55,7 @@ const NavigationBar = () => {
         >
           <span
             className={cn(
-              "transition-all font-normal hover:font-extrabold hover:tracking-widest"
+              "transition-all font-normal hover:font-bold hover:tracking-widest"
             )}
           >
             {ButtonConstants.resume}
@@ -66,7 +66,7 @@ const NavigationBar = () => {
           href={AppContentConstants.linkedLink}
           className="flex flex-row items-center"
         >
-          <span className="transition-all font-normal hover:font-extrabold hover:tracking-widest">
+          <span className="transition-all font-normal hover:font-bold hover:tracking-widest">
             {ButtonConstants.linkedIn}
           </span>
           <GoArrowUpRight size={20} />

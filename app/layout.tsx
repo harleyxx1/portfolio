@@ -3,13 +3,28 @@ import "./globals.css";
 
 import localFont from "next/font/local";
 
-const interFont = localFont({
+const robotoMonoFont = localFont({
   src: [
-    { path: "/fonts/Inter-Regular.otf", weight: "400", style: "normal" },
-    { path: "/fonts/Inter-Medium.otf", weight: "500", style: "normal" },
-    { path: "/fonts/Inter-SemiBold.otf", weight: "600", style: "normal" },
-    { path: "/fonts/Inter-Bold.otf", weight: "700", style: "normal" },
-    { path: "/fonts/Inter-ExtraBold.otf", weight: "800", style: "normal" },
+    {
+      path: "../public/fonts/RobotoMono-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/RobotoMono-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/RobotoMono-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/RobotoMono-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
   ],
 });
 
@@ -25,7 +40,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${interFont.className} antialiased min-w-[350px]`}>
+      <body className={`${robotoMonoFont.className} antialiased min-w-[350px]`}>
         {children}
       </body>
     </html>

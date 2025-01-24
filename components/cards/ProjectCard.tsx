@@ -31,13 +31,13 @@ const ProjectCards = (props: ProjectCards) => {
   const indexClassname = cn("font-regular text-xl", "lg:font-regular text-5xl");
 
   const titleClassname = cn(
-    "mt-2 font-extrabold text-sm",
+    "mt-2 font-bold text-sm",
     "sm:text-[30px] sm:leading-8",
     "md:text-[50px] md:leading-[50px] md:mt-6 md:max-w-[400px]",
-    "lg:mt-10 lg:font-extrabold lg:text-6xl lg:max-w-[500px]"
+    "lg:mt-10 lg:font-bold lg:text-6xl lg:max-w-[500px]"
   );
   const subtitleClassname = cn(
-    "mt-2 font-extrabold text-[9px] text-gray-800",
+    "mt-2 font-bold text-[9px] text-gray-800",
     "sm:text-[13px]",
     "md:text-[15px] md:mt-2 md:max-w-[500px]",
     "lg:mt-4 lg:text-lg"

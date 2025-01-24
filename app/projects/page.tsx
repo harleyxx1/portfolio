@@ -9,7 +9,7 @@ const page = () => {
       <DecorationBar />
       <div className="flex flex-row items-center gap-4 mb-10 relative left-[-5px] mt-2">
         <GoArrowDownRight size={25} />
-        <p className="tracking-wider text-xl leading-[1.2] font-extrabold">
+        <p className="tracking-wider text-xl leading-[1.2] font-bold">
           Personal Projects
         </p>
       </div>

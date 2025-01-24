@@ -15,7 +15,7 @@ const page = () => {
       <div className="flex flex-col lg:justify-between h-full flex-1 z-10 mr-10">
         <div>
           <DecorationBar />
-          <p className="mt-5 tracking-wider text-3xl sm:text-[50px] leading-[1.2] font-extrabold">
+          <p className="mt-5 tracking-wider text-3xl sm:text-[50px] leading-[1.2] font-bold">
             {AppContentConstants.showcaseHeader}
           </p>
           <p className="mt-5 tracking-wider text-[15px] sm:text-[20px] leading-[1.3] font-semibold">
