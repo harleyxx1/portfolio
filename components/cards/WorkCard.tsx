@@ -1,35 +1,36 @@
 import Link from "next/link";
 import { GoArrowUpRight } from "react-icons/go";
 import { cn } from "@/lib/utils";
-import { ProjectItemType } from "@/types/data-types";
+import { WorkItemType } from "@/types/data-types";
 import { IconType } from "react-icons";
 import MonitorImageContainer from "../images/MonitorImageContainer";
 import PhoneImageContainer from "../images/PhoneImageContainer";
 
-interface ProjectCards {
-  item: ProjectItemType;
+interface WorkCardProps {
+  item: WorkItemType;
 }
 
-const ProjectCards = (props: ProjectCards) => {
+const WorkCard = (props: WorkCardProps) => {
   const {
     id,
-    projectDescription,
     projectName,
     projectShowCaseImage,
     projectURL,
-    techUsed,
+    projectAppstoreLink,
+    projectPlaystoreLink,
     type,
+    techUsed,
   } = props.item;
 
   const container = cn(
     "flex flex-1 w-full bg-earlyDawn overflow-hidden relative md:min-h-[45dvh] lg:h-[65dvh] rounded-xl shadow-md border transition-all duration-500 border-transparent hover:border-borderColor",
-    type === "monitor" ? "min-h-[30dvh]" : "min-h-[40dvh]"
+    type === "monitor" ? "min-h-[30dvh]" : "min-h-[35dvh]"
   );
   const firstSectionClassname = cn(
     "flex flex-1 flex-col py-6 pl-7",
     "lg:py-16 lg:pl-20"
   );
-  const firstSectionInfoClassname = cn("flex flex-col mr-1");
+  const firstSectionInfoClassname = cn("flex flex-col mr-1 flex-1");
 
   const indexClassname = cn("font-regular text-xl", "lg:font-regular text-5xl");
 
@@ -39,20 +40,17 @@ const ProjectCards = (props: ProjectCards) => {
     "md:text-[50px] md:leading-[50px] md:mt-6 md:max-w-[400px]",
     "lg:mt-10 lg:font-bold lg:text-6xl lg:max-w-[500px]"
   );
-  const subtitleClassname = cn(
-    "mt-2 font-bold text-[9px] text-gray-800",
-    "sm:text-[13px]",
-    "md:text-[15px] md:mt-2 md:max-w-[500px]",
-    "lg:mt-4 lg:text-lg"
-  );
 
   const techTitleClassname = cn(
     "mt-4 font-semibold text-[9px] text-gray-800 mb-1",
     "sm:text-[13px]",
     "lg:mt-7 lg:text-lg"
   );
-  const techItemContainerClassname = cn("flex flex-row flex-wrap gap-3");
-  const techItemClassname = cn("flex flex-row items-center gap-1");
+  const techItemContainerClassname = cn(
+    "flex flex-row flex-wrap",
+    "lg:mt-3 lg:max-w-[300px]"
+  );
+  const techItemClassname = cn("flex flex-row items-center gap-1 mr-4 mb-1");
   const techItemIconClassname = cn("h-[10px] w-[10px]", "lg:h-[20px] w-[20px]");
   const tectItemTextClassname = cn(
     "font-regular text-[9px] text-gray-800",
@@ -60,9 +58,9 @@ const ProjectCards = (props: ProjectCards) => {
     "lg:text-sm"
   );
 
-  const viewSiteContainerClassname = cn("flex flex-1 items-end mt-5");
+  const viewSiteContainerClassname = cn("mt-5 flex-col");
   const viewSiteSubContainerClassname = cn(
-    "flex items-center hover:cursor-pointer border-b border-b-transparent transition-all duration-700 relative hover:border-b-borderColor hover:translate-y-[-5px]"
+    "flex max-w-[230px] items-center hover:cursor-pointer border-b border-b-transparent transition-all duration-700 relative hover:border-b-borderColor hover:translate-y-[-5px]"
   );
   const viewSiteTextClassname = cn(
     "text-[9px]",
@@ -101,12 +99,11 @@ const ProjectCards = (props: ProjectCards) => {
         <div className={firstSectionInfoClassname}>
           <p className={indexClassname}>{showId}</p>
           <p className={titleClassname}>{projectName}</p>
-          <p className={subtitleClassname}>{projectDescription}</p>
           <p className={techTitleClassname}>Tech Used:</p>
           <div className={techItemContainerClassname}>
             {techUsed.map((item) => (
               <div
-                key={`tech-project-${projectName}-${item.id}`}
+                key={`tech-work-${projectName}-${item.id}`}
                 className={techItemClassname}
               >
                 {renderIcon(item.icon)}
@@ -115,14 +112,32 @@ const ProjectCards = (props: ProjectCards) => {
             ))}
           </div>
         </div>
-        {projectURL && (
+        {(projectURL || projectPlaystoreLink || projectAppstoreLink) && (
           <div className={viewSiteContainerClassname}>
-            <div className={viewSiteSubContainerClassname}>
-              <Link href={projectURL}>
-                <p className={viewSiteTextClassname}>View Site</p>
-              </Link>
-              <GoArrowUpRight className={viewSiteIconClassname} />
-            </div>
+            {projectPlaystoreLink && (
+              <div className={viewSiteSubContainerClassname}>
+                <Link href={projectPlaystoreLink}>
+                  <p className={viewSiteTextClassname}>View in Playstore</p>
+                </Link>
+                <GoArrowUpRight className={viewSiteIconClassname} />
+              </div>
+            )}
+            {projectAppstoreLink && (
+              <div className={viewSiteSubContainerClassname}>
+                <Link href={projectAppstoreLink}>
+                  <p className={viewSiteTextClassname}>View in Appstore</p>
+                </Link>
+                <GoArrowUpRight className={viewSiteIconClassname} />
+              </div>
+            )}
+            {projectURL && (
+              <div className={viewSiteSubContainerClassname}>
+                <Link href={projectURL}>
+                  <p className={viewSiteTextClassname}>View Site</p>
+                </Link>
+                <GoArrowUpRight className={viewSiteIconClassname} />
+              </div>
+            )}
           </div>
         )}
       </div>
@@ -131,4 +146,4 @@ const ProjectCards = (props: ProjectCards) => {
   );
 };
 
-export default ProjectCards;
+export default WorkCard;

@@ -13,6 +13,7 @@ const MonitorImageContainer = (props: MonitorImageContainerProps) => {
     "lg:h-[450px] lg:w-[550px] lg:right-[-120px]",
     "xl:h-[500px] xl:w-[650px] xl:right-10"
   );
+
   return (
     <div className="flex flex-1">
       <div className={imageContainerClassName}>

@@ -7,6 +7,18 @@ export type ProjectItemType = {
   projectDescription: string,
   projectURL: string | undefined,
   projectShowCaseImage: StaticImageData,
+  type: "monitor" | "phone",
+  techUsed: TechUsedItemType[]
+}
+
+export type WorkItemType = {
+  id: number,
+  projectName: string,
+  projectURL: string | undefined,
+  projectShowCaseImage: StaticImageData,
+  projectPlaystoreLink: string | undefined,
+  projectAppstoreLink: string | undefined,
+  type: "monitor" | "phone",
   techUsed: TechUsedItemType[]
 }
 
