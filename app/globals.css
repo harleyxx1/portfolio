@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --alabaster: #F2EFE7;
+    --early-dawn: #FBF5DD;
+    --borderColor: #2C363F;
+  }
+  .dark {
+    --alabaster: #F2EFE7;
+    --early-dawn: #FBF5DD;
+    --borderColor: #2C363F;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+body {
+  background-color: var(--alabaster);
+}
+
+@theme {
+  --breakpoint-xs: 490px;
+}
