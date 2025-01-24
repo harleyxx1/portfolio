@@ -3,10 +3,10 @@ import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { AppContentConstants } from "@/constants/AppContentConstants";
-import LottieComponent from "@/components/LottieComponent";
-import developer from "@/public/lottie/developer.json";
-import web from "@/public/lottie/web.json";
-import mobile from "@/public/lottie/mobile.json";
+// import LottieComponent from "@/components/LottieComponent";
+// import developer from "@/public/lottie/developer.json";
+// import web from "@/public/lottie/web.json";
+// import mobile from "@/public/lottie/mobile.json";
 import DecorationBar from "@/components/DecorationBar";
 
 const page = () => {
@@ -37,7 +37,7 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-1 items-center justify-center relative">
+      {/* <div className="flex flex-1 items-center justify-center relative">
         <LottieComponent animationData={developer} loop={true} />
         <div className="absolute h-[150px] left-[20px] top-[50px] sm:left-[80px] md:left-[130px] lg:h-[180px] lg:left-[30px]">
           <LottieComponent animationData={web} loop={true} />
@@ -45,7 +45,7 @@ const page = () => {
         <div className="absolute h-[90px] right-0 bottom-[100px] sm:right-[50px] md:right-[90px] lg:h-[100px] lg:right-0 lg:bottom-[150px]">
           <LottieComponent animationData={mobile} loop={true} />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
