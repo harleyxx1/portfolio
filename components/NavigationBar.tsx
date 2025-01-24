@@ -49,10 +49,7 @@ const NavigationBar = () => {
             {ButtonConstants.works}
           </span>
         </Link>
-        <Link
-          href={AppContentConstants.resumeLink}
-          className="flex flex-row items-center"
-        >
+        <Link href={""} className="flex flex-row items-center">
           <span
             className={cn(
               "transition-all font-normal hover:font-bold hover:tracking-widest"
