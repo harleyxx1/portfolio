@@ -23,8 +23,10 @@ const WorkCard = (props: WorkCardProps) => {
   } = props.item;
 
   const container = cn(
-    "flex flex-1 w-full bg-earlyDawn overflow-hidden relative md:min-h-[45dvh] lg:h-[65dvh] rounded-xl shadow-md border transition-all duration-500 border-transparent hover:border-borderColor",
-    type === "monitor" ? "min-h-[30dvh]" : "min-h-[35dvh]"
+    "flex flex-1 w-full bg-earlyDawn overflow-hidden relative rounded-xl shadow-md border transition-all duration-500 border-transparent hover:border-borderColor",
+    type === "phone"
+      ? "min-h-[280px] xs:min-h-[370px] md:min-h-[400px] lg:min-h-[580px] xl:min-h-[620px]"
+      : "min-h-[280px] sm:min-h-[370px] md:min-h-[450px] lg:min-h-[640px]"
   );
   const firstSectionClassname = cn(
     "flex flex-1 flex-col py-6 pl-7",
